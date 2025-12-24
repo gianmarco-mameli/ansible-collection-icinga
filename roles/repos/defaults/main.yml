@@ -28,3 +28,12 @@ icinga_repo_testing: false
 icinga_repo_snapshot: false
 icinga_repo_epel: false
 icinga_repo_scl: false
+
+netways_repo_gpgkey: https://packages.netways.de/netways-repo.asc
+netways_repo_extras: false
+netways_repo_plugins: false
+
+netways_repo_apt_extras_key: "{{ netways_repo_gpgkey }}"
+netways_repo_apt_extras_keyring: /etc/apt/keyrings/netways.gpg
+netwoys_repo_apt_extras_url: https://packages.netways.de/extras/{{ ansible_distribution | lower }}
+netways_repo_apt_extras_deb: "{{ ansible_distribution_release | lower }}
